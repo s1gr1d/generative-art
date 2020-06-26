@@ -7,9 +7,9 @@ import {
   Redirect,
 } from 'react-router-dom'
 
-import { MonoBoxes } from './scenes/1/MonoBoxes'
+import { Terrain } from './scenes/1/Terrain'
 import { GradientShader } from './scenes/2/GradientShader'
-import { Terrain } from './scenes/3/Terrain'
+import { MonoBoxes } from './scenes/3/MonoBoxes'
 
 const App = () => {
   return (
@@ -17,13 +17,13 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/1">
-            <MonoBoxes />
+            <Terrain />
           </Route>
           <Route path="/2">
             <GradientShader />
           </Route>
           <Route path="/3">
-            <Terrain />
+            <MonoBoxes />
           </Route>
           <Route path="/">
             <Redirect to="/1" />
