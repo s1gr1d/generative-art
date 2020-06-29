@@ -12,26 +12,20 @@ export const fragmentShader = `
   }
 `
 
-export const vertexShader =
-  `${simplex4d}` +
-  `
+export const vertexShader = `
+    ${simplex4d}
    
     varying vec2 vUv;
     
     uniform float time;
     
  
-    float noise(vec2 co){
-        return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
-    }
-   
-
     void main() {
       vUv = uv;
       
       float posX = position.x;
       vec3 pos = position.xyz;
-      pos += snoise4(vec4(position.xyz, time));
+      pos += simplex4d(vec4(position.xyz, time));
            
       gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
     }
