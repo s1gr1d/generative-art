@@ -10,6 +10,7 @@ import {
 import { Terrain } from './scenes/1/Terrain'
 import { GradientShader } from './scenes/2/GradientShader'
 import { MonoBoxes } from './scenes/3/MonoBoxes'
+import { MovingBoxes } from './scenes/4/MovingBoxes'
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path="/3">
             <MonoBoxes />
+          </Route>
+          <Route path="/4">
+            <MovingBoxes />
           </Route>
           <Route path="/">
             <Redirect to="/1" />
