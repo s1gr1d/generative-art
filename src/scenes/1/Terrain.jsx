@@ -28,7 +28,7 @@ export const Terrain = () => {
 
   useEffect(() => {
     set({ camRotation: [0, 0, 0] })
-  }, [])
+  }, [set])
 
   return (
     <Canvas onMouseMove={onMouseMove}>

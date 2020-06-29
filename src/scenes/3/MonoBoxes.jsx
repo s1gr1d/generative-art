@@ -1,10 +1,8 @@
 import React, { useMemo, useRef } from 'react'
-import { BoxBufferGeometry, MeshBasicMaterial } from 'three'
+import { BoxBufferGeometry } from 'three'
 import { Canvas, useFrame, useThree } from 'react-three-fiber'
-import palettes from 'nice-color-palettes'
 import { Random } from 'random-js'
 import { OrbitControls, OrthographicCamera } from 'drei'
-import { randomColorPalettes } from '../../lib/randomFunction'
 import { fragmentShader, vertexShader } from './shader'
 
 const Cubes = ({ amount = 1 }) => {
@@ -21,9 +19,7 @@ const Cubes = ({ amount = 1 }) => {
       vertexShader,
       fragmentShader,
     }
-  }, [gl.capabilities, invalidate])
-
-  const colorPalette = randomColorPalettes()
+  }, [gl.capabilities, invalidate, aspect])
 
   const rdm = new Random()
   const rdmScale = () => rdm.real(-0.5, 0.5)

@@ -49,7 +49,7 @@ export const WireframeTerrain = ({
         )
         geometry.elementsNeedUpdate = true
       },
-      [size, height, levels, scale, seed]
+      [simplex, size, height, levels, scale]
     ),
     []
   )
