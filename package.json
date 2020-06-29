@@ -4,7 +4,6 @@
   "private": false,
   "dependencies": {
     "drei": "0.0.60",
-    "glslify": "^7.0.0",
     "gltfjsx": "^2.0.3",
     "lerp": "^1.0.3",
     "nice-color-palettes": "^3.0.0",

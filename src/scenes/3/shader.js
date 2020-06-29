@@ -1,6 +1,4 @@
-import glsl from 'glslify'
-
-export const fragmentShader = glsl`
+export const fragmentShader = `
   uniform float time;
   uniform float aspect;
   varying vec2 vUv;
@@ -12,7 +10,7 @@ export const fragmentShader = glsl`
   }
 `
 
-export const vertexShader = glsl`
+export const vertexShader = `
     varying vec2 vUv;
 
     void main() {
