@@ -11,6 +11,7 @@ import { Terrain } from './scenes/1/Terrain'
 import { GradientShader } from './scenes/2/GradientShader'
 import { MonoBoxes } from './scenes/3/MonoBoxes'
 import { MovingBoxes } from './scenes/4/MovingBoxes'
+import { DottedCircles } from './scenes/5/DottedCircles'
 
 const App = () => {
   return (
@@ -28,6 +29,9 @@ const App = () => {
           </Route>
           <Route path="/4">
             <MovingBoxes />
+          </Route>
+          <Route path="/5">
+            <DottedCircles />
           </Route>
           <Route path="/">
             <Redirect to="/1" />
