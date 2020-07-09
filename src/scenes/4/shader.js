@@ -1,4 +1,5 @@
 import { simplex4d } from '../../lib/noiseFunc/simplex4d'
+import { simplex3D, simplex4D } from 'glsl-noise-template-string'
 
 export const fragmentShader = `
   uniform float time;
@@ -13,7 +14,7 @@ export const fragmentShader = `
 `
 
 export const vertexShader = `
-    ${simplex4d}
+    ${simplex4D} 
    
     varying vec2 vUv;
     
@@ -25,7 +26,7 @@ export const vertexShader = `
       
       float posX = position.x;
       vec3 pos = position.xyz;
-      pos += simplex4d(vec4(position.xyz, time));
+      pos += simplex4D(vec4(position, time));
            
       gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
     }
