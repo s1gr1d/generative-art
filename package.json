@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
-    "drei": "0.0.60",
+    "drei": "0.0.67",
     "glsl-noise-template-string": "^0.3.2",
     "gltfjsx": "^2.0.3",
     "lerp": "^1.0.3",
