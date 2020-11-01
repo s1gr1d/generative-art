@@ -5,7 +5,7 @@
   "dependencies": {
     "drei": "0.0.60",
     "glsl-noise-template-string": "^0.3.2",
-    "gltfjsx": "^2.0.3",
+    "gltfjsx": "^3.0.0",
     "lerp": "^1.0.3",
     "nice-color-palettes": "^3.0.0",
     "prop-types": "^15.7.2",
