@@ -1,7 +1,9 @@
 import { simplex4d } from '../../lib/noiseFunc/simplex4d'
 import { simplex3D, simplex4D } from 'glsl-noise-template-string'
 
-export const fragmentShader = `
+export const fragmentShader = ` 
+  ${simplex3D}
+
   uniform float time;
   uniform float aspect;
   uniform vec3 color;
@@ -24,7 +26,11 @@ export const fragmentShader = `
     
     // circle size
     // float mask = d > 0.25 ? 1.0 : 0.0;
-    float mask = step(0.23 + sin(time + vUv.x * 2.0) * 0.25, d);
+    // float mask = step(0.23 + sin(time + vUv.x  * 2.0) * 0.25, d);
+    
+    vec2 noiseInput = coords * 10.0;
+    float offset = simplex3D(vec3(noiseInput, time));
+    float mask = step(0.23 + offset, d);
     
     vec3 fragColor = mix(color, vec3(1.0), mask);
 
