@@ -18,7 +18,7 @@
     "react-three-fiber": "^4.2.12",
     "react-use-gesture": "^7.0.15",
     "simplex-noise": "^2.4.0",
-    "three": "0.117.1"
+    "three": "0.125.0"
   },
   "scripts": {
     "start": "react-scripts start",
